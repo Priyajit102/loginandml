@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API YEAR TO VALUE</title>
+  </head>
+  <body>
+    <div class="login">
+      <h1>
+        Car price api by MIR
+      </h1>
+      <form action="{{url_for('predict')}}" method="post">
+        <input type="number" name="milage" placeholder="Milage" required />
+        <input type="number" name="age" placeholder="Age(In Year)" required />
+        <select name="car" required>
+          <option></option>
+          <option value="01">BMW</option>
+          <option value="10">Audi</option>
+          <option value="00">Mercedes</option>
+        </select>
+        <input type="submit" value="Submit" />
+      </form>
+      <br />
+      <br />
+      {{pretxt}}
+    </div>
+  </body>
+</html>
