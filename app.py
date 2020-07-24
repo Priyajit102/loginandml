@@ -65,7 +65,9 @@ def predict():
     output = round(prediction[0], 2)
 
     return render_template('index.html', pretxt="The value on that year is Rs.{}".format(output))
-
+@app.route('/formapp/<latitude>/<longitude>')
+def index(latitude,longitude):
+    return '<h1>your input<br><br> latitude=> {} <br> longitude=> {}</h1>'.format(latitude,longitude)
 @app.route('/dropsession')
 def dropsession():
     session.pop('user_id',None)
