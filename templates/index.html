@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <style>
-body  {
-  background-image: url("im1.jpg");
-  background-color: #cccccc;
+body{
+  background-image: url({{ url_for('static', filename='img/im1.jpg') }})
 }
 </style>
     <meta charset="UTF-8">
@@ -15,12 +14,13 @@ body  {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </head>
-  <body>
-  <nav class="navbar navbar-dark bg-dark">
+<body style="background-image: url({{ url_for('static', filename='img/im1.jpg') }})" >
+<nav class="navbar navbar-dark bg-dark">
           <a class="navbar-brand" href="#">Navbar</a>
+     <button type="button" class="btn btn-warning" onclick="window.location = '/formapp/<latitude>/<longitude>';" type="submit">Find Location</button>
         <button type="button" class="btn btn-warning" onclick="window.location = '/dropsession';" type="submit">LOGOUT</button>
     </nav><br><h5 align="center">Welcome {{ email }} to Home Page</h5><br>
-    <div class="login">
+    <div class="login" style="background-image: url('im1.jpg');">
       <h1>
         Car price api
       </h1>
